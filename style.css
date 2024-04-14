@@ -1,0 +1,300 @@
+* {
+    margin: 0; /* Внешний отступ */
+    padding: 0; /* Внутренний отступ */
+
+    font-family: "Poppins", sans-serif; /*Шрифты*/
+}
+
+body {
+    background-color: #9CF6FB; /* Задний фон */
+}
+
+.header {
+    height: 110px; /* Высота шапки */
+    background-color: #9CF6FB; /* Это понятно */
+    
+    display: grid; /* Позиционирование в виде сетки */
+    justify-content: center; /* Работа с пространством элементов*/
+
+    animation: slideIn 1s forwards; /* Анимация выхода header слева направо */
+}
+
+/* header  design*/
+.logo {
+    top: 10%; /* Передвинаем вниз */
+    right: -550%; /* Передвигаем влево */
+    position: relative; /* Позиционирование */
+}
+
+.logo img {
+    border-radius: 50%; /* Круглая фотка */
+}
+
+.content {
+    position: absolute; /* Это понятно */
+    top: 0%; /* Это понятно */
+    left: 50%; /* Это понятно */
+    transform: translateX(-50%); /* Передвижение относительно изначальной позиции */
+    width: 100%; /* Это понятно */
+    padding: 2rem; /* Это понятно */
+    text-align: center; /* Оцентровывание текста */
+}
+
+/* "My Skills" design */
+.skills {
+    display: flex; /* Распредление элементов по горизонтали */
+    flex-direction: column; /* Размещение элементов в контейнере */
+    align-items: center; /**/
+    text-align: center; /* Это понятно */
+    margin-bottom: 160px; /**/
+}
+
+
+.skill {
+    width: 100%; /* Это понятно */
+    max-width: 400px; /* */
+    margin-bottom: 20px; /*  */
+    margin-top: -20px; /**/
+}
+
+.skill-name {
+    font-size: 18px; /* Размер шрифта */
+    font-weight: 700; /**/
+    color: #000000; /* Цвет шрифта */
+    text-transform: uppercase; /**/
+    margin: 20px 0; /* Внешний отступ */
+}
+
+.skill-bar {
+    height: 14px; /* Это понятно */
+    background: #202020; /* Это понятно */
+    border-radius: 3px; /* Это понятно */
+}
+
+.skill-per {
+    height: 14px; /* Это понятно */
+    background-color: #4A5FC1; /**/
+    border-radius: 3px; /**/
+    position: relative; /**/
+    animation: fillBars 2.5s 1; 
+}
+
+.skill-per::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px; /**/
+    background: #f1f1f1; /* Это понятно */
+    border-radius: 4px; /* Это понятно */
+    font-size: 12px; /* Это понятно */
+    top: -35px; /* Это понятно */
+    right: 0; /* Это понятно */
+    transform: translateX(50%); /**/
+}
+
+.skill-per::after {
+    content: "";
+    position: absolute;
+    width: 7px; /* Это понятно */
+    height: 7px; /* Это понятно */
+    background: #f1f1f1; /* Это понятно */
+    top: -18px; /* Это понятно */
+    right: 0; /* Это понятно */
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 1px; /* Это понятно */
+}
+
+@keyframes fillBars {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.container {    
+    height: 400px;
+    clear: both;
+}
+
+#header1, #header2, #header3, #col1, #col2, #col3 { 
+    width: 250px;
+    padding: 20px;
+    margin-left: 165px;
+    margin-top: 2px;
+    float: left;
+    border: 1px solid black;
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 80%;
+    color: rgb(1, 0, 0);
+}
+
+#col1, #col2, #col3 { 
+   font-family: "Times New Roman", Times, serif; /* Шрифт с засечками */
+   font-size: 100%; /* Размер шрифта */
+   font-weight: normal; /* Нормальное начертание */
+   color: black; /* Цвет текста */
+} 
+
+#header1 {
+    background: #E5B9A8;
+}
+
+#header2 {
+    background: #E5B9A8;
+}
+
+#header3 {
+    background: #E5B9A8;
+}
+
+#col1 {
+    background: #E5B9A8;
+}
+
+#col2 {
+    background: #E5B9A8;
+}
+
+#col3 {
+    background: #E5B9A8;
+}
+
+/* footer design */
+.footer {
+    position: relative; /* Это понятно */
+    width: 100%; /* Это понятно */
+    background-color: #3586ff; /* Это понятно */
+    min-height: 40px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center; /* Оцентровывание пространства у элементов */
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.social-icon,
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    right: 50px;
+    flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+    list-style: none;
+}
+
+.social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-icon__link img {
+    height: 80px;
+}
+
+.end {
+    translate: -30px;
+    color: #f1f1f1;
+}
+
+.menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+.menu__link:hover {
+    opacity: 1;
+}
+
+.wave {
+    position: absolute;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: url("wave.png");
+    background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+    z-index: 900;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+    z-index: 999;
+    opacity: 0.1;
+    bottom: 20px;
+    animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+    z-index: 999;
+    opacity: 0.1;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+@keyframes animateWaves {
+    0%{
+        background-position-x: 1000px;
+    }
+
+    100%{
+        background-positon-x: 0px;
+    }
+}
+
+/* Это понятно */
+@keyframes animate {
+    0%{
+        background-position-x: -1000px;
+    }
+    
+    100%{
+        background-positon-x: 0px;
+    }
+}
